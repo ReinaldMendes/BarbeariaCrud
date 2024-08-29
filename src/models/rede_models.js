@@ -1,3 +1,4 @@
+const usuarios_controller = require("../controllers/usuario.js");
 let nextId = 1;
 
 const model = (rede, id = nextId++) => {
@@ -14,3 +15,4 @@ const model = (rede, id = nextId++) => {
     };
   }
 };
+module.exports = model;

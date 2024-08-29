@@ -1,3 +1,5 @@
+const rede_controller = require("../controllers/rede");
+
 let nextId = 1;
 
 const model = (barbearia, id = nextId++) => {
@@ -17,3 +19,4 @@ const model = (barbearia, id = nextId++) => {
     };
   }
 };
+module.exports = model;

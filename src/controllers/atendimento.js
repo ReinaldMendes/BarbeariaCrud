@@ -1,6 +1,4 @@
 const db = [];
-const clientes_controller = require("./cliente.js");
-const servicos_controller = require("./servico.js");
 const model = require("../models/atendimento_models.js");
 
 const store = (body) => {

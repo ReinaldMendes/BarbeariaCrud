@@ -1,3 +1,6 @@
+const barbearia_controller = require("../controllers/barbearia");
+
+let nextId = 1;
 const model = (barbeiro, id = nextId++) => {
   if (
     barbeiro.nome != undefined &&
@@ -14,3 +17,4 @@ const model = (barbeiro, id = nextId++) => {
     };
   }
 };
+module.exports = model;
