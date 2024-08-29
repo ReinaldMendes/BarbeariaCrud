@@ -1,23 +1,7 @@
 const db = [];
 const barbearia_controller = require("./barbearia.js");
-let nextId = 1;
+const model = require("../models/barbeiro_models.js");
 
-const model = (barbeiro, id = nextId++) => {
-  if (
-    barbeiro.nome != undefined &&
-    barbeiro.nome != "" &&
-    barbeiro.id_barbearia != undefined &&
-    barbearia_controller.show(barbeiro.id_barbearia)
-  ) {
-    return {
-      id,
-      id_barbearia: barbeiro.id_barbearia,
-      nome: barbeiro.nome,
-      fotos: barbeiro.fotos,
-      bio: barbeiro.bio,
-    };
-  }
-};
 const store = (body) => {
   const novo = model(body);
   if (novo) {

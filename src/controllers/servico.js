@@ -1,23 +1,6 @@
 const db = [];
 const barbeiro_controller = require("./barbeiro.js");
-let nextId = 1;
-
-const model = (servico, id = nextId++) => {
-  if (
-    servico.nome != undefined &&
-    servico.nome != "" &&
-    servico.id_barbeiro != undefined &&
-    barbeiro_controller.show(servico.id_barbeiro)
-  ) {
-    return {
-      id,
-      id_barbeiro: servico.id_barbeiro,
-      nome: servico.data,
-      preco: servico.preco,
-      duracao_minutos: servico.duracao_minutos,
-    };
-  }
-};
+const model = require("../models/servico_models.js");
 const store = (body) => {
   const novo = model(body);
   if (novo) {

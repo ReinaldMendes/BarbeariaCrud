@@ -1,16 +1,5 @@
+const model = require("../models/cliente_models.js");
 const db = [];
-let nextID = 1;
-const model = (cliente, id = nextID++) => {
-  if (cliente.nome != undefined && cliente.nome != "") {
-    return {
-      id: id,
-      nome: cliente.nome,
-      telefone: cliente.telefone,
-      email: cliente.email,
-      senha: cliente.senha,
-    };
-  }
-};
 
 const store = (body) => {
   const novo = model(body);
