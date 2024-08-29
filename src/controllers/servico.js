@@ -1,5 +1,5 @@
 const db = [];
-const barbeiro_controller = require("./barbeiro.js");
+
 const model = require("../models/servico_models.js");
 const store = (body) => {
   const novo = model(body);

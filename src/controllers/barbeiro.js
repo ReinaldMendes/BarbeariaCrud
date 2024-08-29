@@ -1,5 +1,4 @@
 const db = [];
-const barbearia_controller = require("./barbearia.js");
 const model = require("../models/barbeiro_models.js");
 
 const store = (body) => {

@@ -1,5 +1,4 @@
 const db = [];
-const rede_controller = require("./rede.js");
 const model = require("../models/barbearia_models.js");
 
 const store = (body) => {

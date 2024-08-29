@@ -1,26 +1,26 @@
-app.post("/barbeiro", (req, res) => {
-  const barbearia = req.body;
-  const code = barbearia_controller.store(barbearia);
+app.post("/atendimentos", (req, res) => {
+  const atendimento = req.body;
+  const code = atendimento_controller.store(atendimento);
   res.status(code).json();
 });
 
-app.get("/barbeiro", (req, res) => {
-  const barbearia = barbearia_controller.index();
-  res.json(barbearia);
+app.get("/atendimentos", (req, res) => {
+  const atendimento = atendimento_controller.index();
+  res.json(atendimento);
 });
 
-app.get("/barbeiro/:id", (req, res) => {
-  const barbearia = barbearia_controller.show(req.params.id);
-  res.json(barbearia);
+app.get("/atendimentos/:id", (req, res) => {
+  const atendimento = atendimento_controller.show(req.params.id);
+  res.json(atendimento);
 });
 
-app.put("/barbeiro/:id", (req, res) => {
-  const barbearia = req.body;
-  const code = barbearia_controller.update(req.params.id, barbearia);
+app.put("/atendimentos/:id", (req, res) => {
+  const atendimento = req.body;
+  const code = atendimento_controller.update(req.params.id, atendimento);
   res.status(code).json();
 });
 
-app.delete("/barbeiro/:id", (req, res) => {
-  barbearia_controller.destroy(req.params.id);
+app.delete("/atendimentos/:id", (req, res) => {
+  atendimento_controller.destroy(req.params.id);
   res.json();
 });
