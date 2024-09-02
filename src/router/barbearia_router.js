@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const barbearia_controller = require("../controllers/barbearia.js");
-const cep_endereco = require("./middlewares/cep_endereco.js");
+const cep_endereco = require("../middlewares/cep_endereco.js");
 
 router.post("/", cep_endereco, (req, res, next) => {
   const barbearia = req.body;

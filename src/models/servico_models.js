@@ -6,6 +6,10 @@ const model = (servico, id = nextId++) => {
   if (
     servico.nome != undefined &&
     servico.nome != "" &&
+    servico.preco != undefined &&
+    !isNaN(Number(servico.preco)) &&
+    servico.duracao_minutos != undefined &&
+    servico.duracao_minutos > 0 &&
     servico.id_barbeiro != undefined &&
     barbeiro_controller.show(servico.id_barbeiro)
   ) {
