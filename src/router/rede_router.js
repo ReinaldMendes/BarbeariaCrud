@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-
+const rede_controller = require("../controllers/rede.js");
 router.post("/", (req, res) => {
   const rede = req.body;
   const code = rede_controller.store(rede);

@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-
+const clientes_controller = require("../controllers/cliente.js");
 router.post("/", (req, res) => {
   const clientes = req.body;
   const code = clientes_controller.store(clientes);

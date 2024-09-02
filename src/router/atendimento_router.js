@@ -1,5 +1,7 @@
 const express = require("express");
 const router = express.Router();
+const atendimento_controller = require("../controllers/atendimento.js");
+
 router.post("/", (req, res) => {
   const atendimento = req.body;
   const code = atendimento_controller.store(atendimento);

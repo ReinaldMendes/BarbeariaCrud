@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-
+const servicos_controller = require("../controllers/servico.js");
 router.post("/", (req, res) => {
   const servicos = req.body;
   const code = servicos_controller.store(servicos);

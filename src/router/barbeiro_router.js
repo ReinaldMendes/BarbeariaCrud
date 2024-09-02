@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-
+const barbeiro_controller = require("../controllers/barbeiro.js");
 router.post("/", (req, res) => {
   const barbeiro = req.body;
   const code = barbeiro_controller.store(barbeiro);
